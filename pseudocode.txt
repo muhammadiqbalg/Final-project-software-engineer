@@ -1,0 +1,15 @@
+START
+    SET total = 0
+    SET item_count = 0
+    WHILE item_count < 5 DO
+        DISPLAY "Enter price for item: "
+        GET price
+        IF price < 0 THEN
+            DISPLAY "Invalid price. Try again."
+        ELSE
+            SET total = total + price
+            SET item_count = item_count + 1
+        END IF
+    END WHILE
+    DISPLAY "Total amount due: ", total
+END
